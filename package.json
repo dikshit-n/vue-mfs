@@ -1,0 +1,38 @@
+{
+  "name": "vue-mfs",
+  "version": "1.0.0",
+  "description": "Micro Frontends implemented with state management, routes using vue",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"wsrun --parallel dev\"",
+    "build": "concurrently \"wsrun --parallel build\"",
+    "serve": "concurrently \"wsrun --parallel serve\"",
+    "build:remotes": "concurrently \"wsrun --parallel build:remote\"",
+    "build:host": "concurrently \"wsrun --parallel build:host\"",
+    "serve:remotes": "concurrently \"wsrun --parallel serve:remote\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dikshit-n/vue-mfs.git"
+  },
+  "keywords": [
+    "vue",
+    "micro-frontend"
+  ],
+  "author": "dikshit-n",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dikshit-n/vue-mfs/issues"
+  },
+  "homepage": "https://github.com/dikshit-n/vue-mfs#readme",
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "1.3.6",
+    "vite-plugin-css-injected-by-js": "^2.2.0",
+    "concurrently": "^9.1.0",
+    "wsrun": "^5.2.4"
+  }
+}

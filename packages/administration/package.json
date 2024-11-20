@@ -1,0 +1,28 @@
+{
+  "name": "administration",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5002 --strictPort",
+    "start": "vite --port 5003 --strictPort",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview --port 5002 --strictPort",
+    "build:remote": "vue-tsc --noEmit && vite build",
+    "serve:remote": "vite preview --port 5002 --strictPort",
+    "build:host": "echo 'build host'",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.5",
+    "pinia": "^2.0.21"
+  },
+  "devDependencies": {
+    "unplugin-element-plus": "0.4.1",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.5",
+    "vue-tsc": "^0.39.5"
+  }
+}
